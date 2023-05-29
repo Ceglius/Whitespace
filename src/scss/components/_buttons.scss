@@ -5,6 +5,12 @@
   ==== Buttons ====
 */
 
-.button {
-
+.btn-cta {
+  padding: rem(10) rem(20);
+  background-color: var(--btn-cto);
+  color: var(--white-co);
+  font-size: rem(16);
+  font-weight: var(--fw-semi-bold);
+  line-height: rem(20);
+  border-radius: rem(8);
 }
