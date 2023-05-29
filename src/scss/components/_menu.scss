@@ -3,7 +3,6 @@
 
 // Menu
 .menu {
-
   @media (max-width: $burgerBreakpoint) {
     position: fixed;
     top: 0;
@@ -20,8 +19,14 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
     column-gap: rem(24);
+    row-gap: rem(10);
 
+    @media (max-width: $breakpoint992) {
+      column-gap: rem(20);
+    }
     @media (max-width: $burgerBreakpoint) {
       flex-direction: column;
       margin-top: rem(85);
@@ -32,9 +37,6 @@
 
   // .menu__item
   &__item {
-  
-
-
   }
 
   // .menu__link
@@ -45,8 +47,6 @@
     line-height: rem(24);
 
     @media (max-width: $burgerBreakpoint) {
-      
     }
   }
 }
-

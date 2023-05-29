@@ -6,27 +6,34 @@
 */
 
 .header {
-    padding: rem(30) 0;
+  padding: rem(18) 0;
 
-    // .header__container
-    &__container {
-        @include flex-sb-center($gap:24);
+  // .header__container
+  &__container {
+    @include flex-sb-center($gap: 24);
+  }
+
+  // .header__logo
+  &__logo {
+    flex-shrink: 0;
+  }
+
+  // .header__menu
+  &__menu {
+    margin-left: auto;
+    @media (max-width: $burgerBreakpoint) {
+    }
+  }
+
+  &__action {
+    flex-shrink: 0;
+
+    a {
+        font-size: rem(14);
         
     }
-
-    // .header__logo
-    &__logo {
-        
+    @media (max-width: $breakpoint992) {
+      margin-left: auto;
     }
-
-    // .header__menu
-    &__menu {
-        margin-left: auto;
-        @media (max-width: $burgerBreakpoint){
-            
-        }
-    }
+  }
 }
-
-
-
