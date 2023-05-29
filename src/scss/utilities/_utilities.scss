@@ -6,26 +6,22 @@
 */
 
 // Container
-[class*="__container"]  {
+[class*="__container"] {
   max-width: ($containerWidth + $containerPadding) + px;
   width: 100%;
   margin: 0 auto;
   padding: 0 $containerSidePadding + px;
 
   @media (max-width: $breakpoint1450) {
-     
   }
 
   @media (max-width: $breakpoint992) {
-      
   }
 
   @media (max-width: $breakpoint768) {
-     
   }
 
   @media (max-width: $breakpoint480) {
-     
   }
 }
 
@@ -33,4 +29,11 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+.section-heading {
+  color: var(--heading-co);
+  font-style: normal;
+  font-weight: var(--fw-semi-bold);
+  font-size: rem(36);
+  line-height: rem(44);
 }
