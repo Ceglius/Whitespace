@@ -1,0 +1,18 @@
+@use '../abstract/vars' as *;
+@use '../abstract/mixins' as *;
+
+/*
+   ==== Sections ====
+*/
+
+.section {
+
+  // .section__title
+  &__title {
+
+  }
+  // .section__subtext
+  &__subtext {
+
+  }
+}
