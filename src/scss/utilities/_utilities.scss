@@ -37,3 +37,18 @@
   font-size: rem(36);
   line-height: rem(44);
 }
+.top-heading {
+  font-weight: var(--fw-medium);
+  font-size: rem(14);
+  line-height: rem(20);
+  text-align: center;
+  color: var(--top-heading-co);
+  background: #F0F6FF;
+  padding: rem(2) rem(10);
+  border-radius: rem(150);
+}
+.sub-heading {
+  font-size: rem(18);
+  line-height: rem(28);
+  text-align: center;
+}
