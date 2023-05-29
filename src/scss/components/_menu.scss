@@ -3,6 +3,7 @@
 
 // Menu
 .menu {
+
   @media (max-width: $burgerBreakpoint) {
     position: fixed;
     top: 0;
@@ -19,7 +20,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: rem(25);
+    column-gap: rem(24);
 
     @media (max-width: $burgerBreakpoint) {
       flex-direction: column;
@@ -33,53 +34,19 @@
   &__item {
   
 
-    &:hover .submenu {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: visible;
-      transform: translateY(0);
-    }
+
   }
 
   // .menu__link
   &__link {
-    color: var(--black-co);
-    font-size: rem(22);
+    color: var(--body-co);
+    font-size: rem(16);
+    font-weight: var(--fw-medium);
+    line-height: rem(24);
 
     @media (max-width: $burgerBreakpoint) {
-      font-size: rem(18);
+      
     }
   }
 }
 
-.submenu {
-  pointer-events: none;
-  opacity: 0;
-  visibility: visible;
-  position: absolute;
-  left: 50%;
-  translate: -50%;
-  width: fit-content;
-
-  transform: translateY(10px);
-  background-color: red;
-  transition: all 0.3s;
-
-  // .submenu__item
-  &__item {
-  
-
-  }
-
-  // .submenu__link
-  &__link {
-    display: inline-block;
-    text-align: center;
-    padding: rem(10) 0;
-    font-size: rem(50);
-    
-    &:hover {
-      background-color: silver;
-    }
-  }
-}
