@@ -14,4 +14,13 @@
   line-height: rem(20);
   border-radius: rem(8);
   display: inline-block;
+  border: 2px solid transparent;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--white-co);
+      color: var(--btn-cto);
+      border: 2px solid var(--btn-cto);
+    }
+  }
 }

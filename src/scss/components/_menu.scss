@@ -45,7 +45,13 @@
     font-size: rem(16);
     font-weight: var(--fw-medium);
     line-height: rem(24);
-
+    transition: color .3s ease;
+    
+    @media (hover: hover) {
+      &:hover {
+        color: var(--btn-cto);
+      }
+    }
     @media (max-width: $burgerBreakpoint) {
     }
   }
