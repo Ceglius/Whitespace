@@ -18,14 +18,14 @@
  
         &.active {
             &:before {
-                background: var(--burger-color);
+                background: var(--burger-active-color);
                 transform: rotate(45deg);
                 transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
                 top: 8px;
             }
  
             &:after {
-                background:  var(--burger-color);
+                background:  var(--burger-active-color);
                 transform: rotate(-45deg);
                 bottom: 10px;
                 transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
