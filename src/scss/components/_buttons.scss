@@ -16,6 +16,10 @@
   display: inline-block;
   border: 2px solid transparent;
   transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+  @media (max-width: $breakpoint768){
+    padding: rem(7) rem(14);
+  }
   @media (hover: hover) {
     &:hover {
       background-color: var(--white-co);

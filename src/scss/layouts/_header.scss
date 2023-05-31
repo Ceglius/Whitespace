@@ -11,17 +11,24 @@
   // .header__container
   &__container {
     @include flex-sb-center($gap: 24);
+    @media (max-width: $burgerBreakpoint) {
+      gap : rem(15)
+        
+      }
   }
 
   // .header__logo
   &__logo {
+    @media (min-width: $burgerBreakpoint) {
     flex-shrink: 0;
+    }
   }
 
   // .header__menu
   &__menu {
     margin-left: auto;
     @media (max-width: $burgerBreakpoint) {
+      
     }
   }
 
@@ -31,7 +38,7 @@
     a {
         font-size: rem(14);
     }
-    @media (max-width: $breakpoint992) {
+    @media (max-width: $burgerBreakpoint) {
       margin-left: auto;
     }
   }

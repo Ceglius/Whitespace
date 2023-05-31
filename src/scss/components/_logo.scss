@@ -8,4 +8,10 @@
     color: var(--black-co);
     z-index: 10;
     position: relative;
+
+    @media (max-width: $breakpoint480){
+      img {
+        max-width: rem(170);
+      }  
+    }
 }

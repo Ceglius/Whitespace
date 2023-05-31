@@ -9,7 +9,7 @@
     display: none;
     background: transparent;
     z-index: 3;
-    
+    flex-shrink: 0;
     @media screen and (max-width: $burgerBreakpoint) {
         display: flex;
         position: relative;
