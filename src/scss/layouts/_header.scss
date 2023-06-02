@@ -26,7 +26,6 @@
   // .header__menu
   &__menu {
     margin-left: auto;
-
   }
 
   &__action {
@@ -41,8 +40,9 @@
   }
 
   &__burger {
-   
+    display: none;
     @media screen and (max-width: $burgerBreakpoint) {
+      display: block;
       width: rem(36);
       height: rem(36);
       border: 1px solid #ced2da;
@@ -51,7 +51,6 @@
       z-index: 10;
       &.active {
         border: 1px solid var(--white-co);
-
       }
     }
   }

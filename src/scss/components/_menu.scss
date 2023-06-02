@@ -1,7 +1,6 @@
 @use '../abstract/vars' as *;
 @use '../abstract/mixins' as *;
 
-// Menu
 .menu {
   @media (max-width: $burgerBreakpoint) {
     display: flex;
@@ -33,15 +32,13 @@
   // .menu__list
   &__list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    column-gap: rem(24);
+    flex-wrap: wrap;
+    @include adaptiveValue('column-gap',24,15);
     row-gap: rem(10);
 
-    @media (max-width: $breakpoint992) {
-      column-gap: rem(20);
-    }
+
     @media (max-width: $burgerBreakpoint) {
       flex-direction: column;
       padding: 0 rem(20);
@@ -49,7 +46,6 @@
       flex-wrap: nowrap;
       justify-content: flex-start;
       align-items: flex-start;
-
       margin-top: rem(76);
     }
 
