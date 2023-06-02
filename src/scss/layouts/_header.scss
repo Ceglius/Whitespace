@@ -41,6 +41,7 @@
 
   &__burger {
     display: none;
+    flex-shrink: 0;
     @media screen and (max-width: $burgerBreakpoint) {
       display: block;
       width: rem(36);

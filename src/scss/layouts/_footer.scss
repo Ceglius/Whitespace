@@ -4,6 +4,147 @@
   ==== Footer ====
 */
 .footer {
- text-align: center;
-  padding: rem(20);
+  padding: rem(40) 0;
+
+  // .footer__container
+  &__container {
+    @include flex-column($gap: 32);
+  }
+  // .footer__main
+  &__main {
+    @include flex-sb-center($gap: 30);
+    row-gap: rem(32);
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  // .footer__social
+  &__social {
+    max-width: rem(316);
+    
+  }
+
+  // .footer__social-logo
+  &__social-logo {
+    display: block;
+    width: rem(200);
+    margin-bottom: rem(24);
+  }
+
+  // .footer__social-text
+  &__social-text {
+    font-size: rem(16);
+    line-height: rem(24);
+    margin-bottom: rem(32);
+  }
+
+  // .footer__social-icons
+  &__social-icons {
+    display: flex;
+    column-gap: rem(12);
+
+    i {
+      color: #97a1af;
+      font-size: rem(24);
+      transition: all 0.3s ease;
+
+      @media (hover: hover) {
+        &:hover {
+          color: var(--btn-cto);
+        }
+      }
+    }
+  }
+
+  // .footer__usefull-links
+  &__usefull-links {
+
+  }
+
+  // .footer__bottom
+  &__bottom {
+    @include flex-sb-center($gap: 12);
+    padding-top: rem(32);
+    border-top: 1px solid #e4e7ec;
+
+    @media (max-width: $breakpoint768){
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  // .footer__copy
+  &__copy {
+    p,
+    small {
+      font-size: rem(16);
+      line-height: rem(24);
+      color: var(--heading-co);
+    }
+  }
+
+  // .footer__policy
+  &__policy {
+    @include flex-sb-center($gap: 8);
+  }
+}
+.usefull-links {
+  // .usefull-links__item
+  display: flex;
+  flex-wrap: wrap;
+  @include adaptiveValue('gap',60,32);
+
+  &__item {
+    @include flex-column();
+    @include adaptiveValue('gap',16,5); 
+  }
+
+  // .usefull-links__item-heading
+  &__item-heading {
+    font-weight: var(--fw-semi-bold);
+    font-size: rem(18);
+    line-height: rem(28);
+    color: var(--heading-co);
+  }
+
+  // .usefull-links__item-link
+  &__item-link {
+    font-weight: var(--fw-medium);
+    color: var(--body-co);
+    font-size: rem(16);
+    line-height: rem(24);
+    transition: all 0.3s;
+    @media (hover: hover) {
+      &:hover {
+        color: var(--btn-cto);
+      }
+    }
+    i {
+      padding-right: rem(8);
+      color: #97a1af;
+    }
+  }
+}
+
+.policy {
+  // .policy__item
+  &__item {
+    &:not(:last-child) {
+      border-right: 1px solid #ced2da;
+      padding-right: rem(8);
+    }
+  }
+
+  // .policy__link
+  &__link {
+    font-size: rem(16);
+    line-height: rem(24);
+    color: var(--btn-cto);
+    transition: all 0.3s ease;
+    @media (hover: hover) {
+      &:hover {
+        color: var(--heading-co);
+      }
+    }
+  }
 }
