@@ -4,6 +4,9 @@
 // Menu
 .menu {
   @media (max-width: $burgerBreakpoint) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     position: fixed;
     top: 0;
     left: -100%;
@@ -11,14 +14,15 @@
     transition: all 0.3s;
     background-color: var(--white-co);
     z-index: 5;
+
     &.active {
       left: 0;
     }
 
     .menu__list {
-      align-items: flex-start;
       width: 100%;
       padding-right: 25vw;
+      overflow-y: auto;
     }
     .menu__link {
       text-transform: uppercase;
@@ -40,9 +44,13 @@
     }
     @media (max-width: $burgerBreakpoint) {
       flex-direction: column;
-      margin-top: rem(85);
       padding: 0 rem(20);
       row-gap: rem(15);
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      margin-top: rem(76);
     }
 
     @media (max-width: $breakpoint768) {
@@ -66,8 +74,6 @@
       &:hover {
         color: var(--btn-cto);
       }
-    }
-    @media (max-width: $burgerBreakpoint) {
     }
   }
 }
