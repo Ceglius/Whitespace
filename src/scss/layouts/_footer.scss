@@ -21,7 +21,6 @@
   // .footer__social
   &__social {
     max-width: rem(316);
-    
   }
 
   // .footer__social-logo
@@ -56,18 +55,13 @@
     }
   }
 
-  // .footer__usefull-links
-  &__usefull-links {
-
-  }
-
   // .footer__bottom
   &__bottom {
     @include flex-sb-center($gap: 12);
     padding-top: rem(32);
     border-top: 1px solid #e4e7ec;
 
-    @media (max-width: $breakpoint768){
+    @media (max-width: $breakpoint768) {
       flex-direction: column;
       justify-content: center;
     }
@@ -92,11 +86,11 @@
   // .usefull-links__item
   display: flex;
   flex-wrap: wrap;
-  @include adaptiveValue('gap',60,32);
+  @include adaptiveValue("gap", 60, 32);
 
   &__item {
     @include flex-column();
-    @include adaptiveValue('gap',16,5); 
+    @include adaptiveValue("gap", 16, 5);
   }
 
   // .usefull-links__item-heading

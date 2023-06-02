@@ -12,20 +12,8 @@
   margin: 0 auto;
   padding: 0 $containerSidePadding + px;
 
-  @media (max-width: $breakpoint1450) {
-  }
-
-  @media (max-width: $breakpoint992) {
-  }
-
   @media (max-width: $breakpoint768) {
-  padding: 0 rem(10);
-
-  }
-
-  @media (max-width: $breakpoint480) {
-  
-
+    padding: 0 rem(10);
   }
 }
 
@@ -33,35 +21,6 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-.section-text-block {
-  margin-bottom: rem(64);
-}
-.section-heading {
-  color: var(--heading-co);
-  font-style: normal;
-  font-weight: var(--fw-semi-bold);
-  font-size: rem(36); 
-  line-height: rem(44);
-  padding: rem(8) rem(10);
-}
-.top-heading {
-  font-weight: var(--fw-medium);
-  font-size: rem(14);
-  line-height: rem(20);
-  text-align: center;
-  color: var(--top-heading-co);
-  background: #F0F6FF;
-  padding: rem(2) rem(10);
-  border-radius: rem(150);
-  margin-bottom: rem(8);
-
-}
-.sub-heading {
-  font-size: rem(18);
-  line-height: rem(28); 
-  text-align: center;
-  margin-bottom: rem(12);
 }
 
 .overlay {
@@ -71,7 +30,7 @@
   height: 100vh;
   width: 0;
   background-color: #00000071;
-  transition: width .3s ease-out;
+  transition: width 0.3s ease-out;
 
   @media screen and (max-width: $burgerBreakpoint) {
     &.active {
@@ -79,5 +38,4 @@
       z-index: 0;
     }
   }
-
 }
