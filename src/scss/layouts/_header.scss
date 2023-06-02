@@ -12,15 +12,14 @@
   &__container {
     @include flex-sb-center($gap: 24);
     @media (max-width: $burgerBreakpoint) {
-      gap : rem(15)
-        
-      }
+      gap: rem(12);
+    }
   }
 
   // .header__logo
   &__logo {
     @media (min-width: $burgerBreakpoint) {
-    flex-shrink: 0;
+      flex-shrink: 0;
     }
   }
 
@@ -28,7 +27,6 @@
   &__menu {
     margin-left: auto;
     @media (max-width: $burgerBreakpoint) {
-      
     }
   }
 
@@ -36,10 +34,26 @@
     flex-shrink: 0;
 
     a {
-        font-size: rem(14);
+      font-size: rem(14);
     }
     @media (max-width: $burgerBreakpoint) {
       margin-left: auto;
+    }
+  }
+
+  &__burger {
+   
+    @media screen and (max-width: $burgerBreakpoint) {
+      width: rem(36);
+      height: rem(36);
+      border: 1px solid #ced2da;
+      border-radius: 8px;
+      @include flex-center();
+      z-index: 10;
+      &.active {
+        border: 1px solid var(--white-co);
+
+      }
     }
   }
 }
