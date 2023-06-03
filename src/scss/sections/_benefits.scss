@@ -1,0 +1,81 @@
+@use '../abstract/vars' as *;
+@use '../abstract/mixins' as *;
+
+/*
+  ==== Benefits ====
+*/
+
+.benefits {
+  // .benefits__container
+  &__container {
+  }
+
+  // .benefits__wrapper
+  &__wrapper {
+    @include flex-sb-center($gap: 32);
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: column;
+    }
+  }
+
+  // .benefits__content
+  &__content {
+    flex: 1;
+  }
+
+  // .benefits__list
+  &__list {
+  }
+
+  // .benefits__item
+  &__item {
+    padding: rem(24);
+  }
+
+  // .benefits__images
+  &__images {
+    display: flex;
+    gap: rem(32);
+    flex: 1;
+    @media (max-width: $breakpoint992) {
+      padding: 0 rem(16);
+      gap: rem(16);
+    }
+  }
+
+  // .benefits__iamges-block
+  &__images-col {
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+
+    @media (max-width: $breakpoint992) {
+      gap: rem(16);
+    }
+  }
+}
+.item-benefits {
+  // .item-benefits__svg
+  &__svg {
+    @include flex-center();
+    @include square(40);
+    background-color: #f0f6ff;
+    border-radius: rem(12);
+    @include adaptiveValue("margin-bottom", 16, 12);
+  }
+  // .item-benefits__title
+  &__title {
+    font-weight: var(--fw-semi-bold);
+    font-size: rem(20);
+    line-height: rem(28);
+    color: #002966;
+    margin-bottom: rem(8);
+  }
+
+  // .item-benefits__text
+  &__text {
+    color: #002966;
+    @include adaptiveValue("line-height", 28, 21);
+  }
+}

@@ -6,7 +6,8 @@
 */
 
 .hero {
- @include adaptiveValue('margin-top',64, 34);
+  @include adaptiveValue("margin-top", 64, 44);
+  @include adaptiveValue("margin-bottom", 64, 44);
 
   // .hero__container
   &__container {
@@ -40,13 +41,13 @@
       display: inline-block;
       position: relative;
       &::after {
-        content: '';
+        content: "";
         height: 6px;
-        background-image: url('../images/underline.png');
+        background-image: url("../images/underline.png");
         position: absolute;
         bottom: -2px;
         left: 0;
-        width: 100%
+        width: 100%;
       }
     }
   }
