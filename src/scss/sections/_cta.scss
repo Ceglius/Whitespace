@@ -6,50 +6,60 @@
 */
 
 .cta {
+  // .cta__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    // .cta__container
-    &__container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
+    & > .section__text {
+      margin-bottom: rem(36);
+    }
+  }
 
-       & > .section__text {
-            margin-bottom: rem(36);
-        }
+  // .cta__content
+  &__content {
+    margin-bottom: rem(40);
+  }
+
+  // .cta__features
+  &__features {
+    @include flex-sb-center($gap: 0);
+    @include adaptiveValue("gap", 32, 20);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  // .cta__features-item
+  &__features-item {
+    @include flex-sb-center($gap: 8);
+    justify-content: flex-start;
+
+    div {
+      display: inline-block;
+      @include square(36);
+      background-color: #f0f6ff;
+      border-radius: 500px;
+      @include flex-center();
     }
 
-    // .cta__content
-    &__content {
-        margin-bottom: rem(40 );
-
+    span {
+      font-weight: var(--fw-medium);
+      font-size: rem(18);
+      line-height: rem(28);
     }
+  }
 
-    // .cta__features
-    &__features {
-        @include flex-sb-center($gap:0);
-        @include adaptiveValue('gap',32, 20);
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        
-    }
+  // .cta__links
+  &__links {
+    @include flex-sb-center($gap: 12);
 
-    // .cta__features-item
-    &__features-item {
-        @include flex-sb-center($gap:8);
-        justify-content: flex-start;
+    @media (max-width: $breakpoint480) {
+      flex-direction: column;
+      width: 100%;
+      a {
+        width: 100%;
+      }
     }
-
-    // .cta__links
-    &__links {
-        @include flex-sb-center($gap:12);
-        
-        @media (max-width: $breakpoint480){
-            flex-direction: column;
-            width: 100%;
-            a {
-                width: 100%;
-            }
-        }
-    }
+  }
 }
