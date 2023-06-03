@@ -11,8 +11,4 @@ body {
   font-size: var(--fs-body);
   font-weight: var(--fw-regular);
   color: var(--body-co);
-  
-  &.locked {
-    overflow: hidden;
-  }
 }
