@@ -15,7 +15,12 @@
   display: inline-block;
   border: 2px solid #ced2da;
   transition: all 0.2s ease;
-
+  text-align: center;
+  i {
+    display: inline-block;
+    font-size: rem(20);  
+    margin-right: rem(8);
+  }
   &-cta {
     background-color: var(--btn-cto);
     color: var(--white-co);
