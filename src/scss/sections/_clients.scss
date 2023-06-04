@@ -1,0 +1,39 @@
+@use "../abstract/vars" as *;
+@use "../abstract/mixins" as *;
+
+/*
+   ==== Clients ====
+*/
+
+.clients {
+    
+  // .clients__container
+  &__container {
+  }
+
+  // .clients__list
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: rem(20);
+    row-gap: rem(40);
+
+    @media (max-width: $breakpoint992) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: rem(60);
+    }
+
+    @media (max-width: $breakpoint480) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // .clients__item
+  &__item {
+    @include flex-center();
+
+    img {
+      width: auto;
+    }
+  }
+}
