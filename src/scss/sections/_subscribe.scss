@@ -1,0 +1,108 @@
+@use "../abstract/vars" as *;
+@use "../abstract/mixins" as *;
+
+/*
+   ==== Subscribe ====
+*/
+
+.subscribe {
+  @include adaptiveValue("padding-top", 64, 55);
+  @include adaptiveValue("padding-bottom", 64, 55);
+    .section__text {
+        margin-bottom: rem(40);
+    }
+  .section__title,
+  .section__sub-text {
+    text-align: left;
+    color: #002966;
+    position: relative;
+    z-index: 5;
+  }
+  .section__title {
+    max-width: rem(692);
+  }
+  .section__sub-text {
+    max-width: rem(513);
+  }
+
+  // .subscribe__container
+  &__container {
+    @media (max-width: $breakpoint768) {
+      max-width: 100%;
+      padding: 0 0;
+    }
+  }
+  // .subscribe__wrapper
+  &__wrapper {
+    @include adaptiveValue("padding", 64, 10);
+    border-radius: rem(32);
+    background-color: #f0f6ff;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    &::after {
+      content: url("../images/subscribe-bg.jpg");
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      height: 100%;
+
+      @media (max-width: $breakpoint768){
+        right: -20%;
+          transform: scale(1.1);
+      }
+
+      @media (max-width: $breakpoint480){
+        transform: scale(1.5);
+          right: -50%;
+      }
+    
+    }
+
+    @media (max-width: $breakpoint768) {
+      border-radius: rem(0);
+      padding-top: rem(64);
+      padding-bottom: rem(64);
+    }
+
+    @media (max-width: $breakpoint480) {
+      padding-top: rem(48);
+      padding-bottom: rem(48);
+    }
+  }
+  // .subscribe__content
+  &__content {
+  }
+
+  // .subscribe__form
+  &__form {
+    display: flex;
+    gap: rem(16);
+    position: relative;
+    z-index: 5;
+    @media (max-width: $breakpoint480) {
+      flex-direction: column;
+    }
+    input {
+      padding-left: rem(12);
+      width: rem(337);
+      max-width: 100%;
+      border-radius: rem(8);
+      outline-color: #1a75ff;
+
+
+      @media (max-width: $breakpoint480) {
+        width: 100%;
+        padding: rem(10) 0;
+        padding-left: rem(12);
+      }
+
+    }
+
+
+    button {
+    }
+  }
+}

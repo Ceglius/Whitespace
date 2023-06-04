@@ -47,9 +47,11 @@
   // .blog__link
   &__link {
     align-self: center;
-    width: 100%;
+    
     @media (max-width: $breakpoint480) {
+      width: 100%;
       a {
+        
         display: block;
       }
     }

@@ -2,3 +2,4 @@
 import './files/hamburger.js'
 import './files/accordion.js'
 import './files/stickyHeader.js'
+import './files/inputPlaceholder.js'
