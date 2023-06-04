@@ -1,7 +1,10 @@
 @use '../abstract/vars' as *;
 @use '../abstract/mixins' as *;
 
-// Logo
+/*
+   ==== Logo ====
+*/
+
 .logo {
     font-weight: var(--fw-bold);
     font-size: rem(25);

@@ -6,13 +6,38 @@
 */
 
 .section {
+  @include adaptiveValue("padding-top", 80, 55);
+  @include adaptiveValue("padding-bottom", 80, 55);
 
-  // .section__title
-  &__title {
-
+  &__text{
+    text-align: center;
+    @include adaptiveValue('margin-bottom',64,44)
   }
-  // .section__subtext
-  &__subtext {
-
+  
+  &__title {
+    color: var(--heading-co);
+    font-style: normal;
+    font-weight: var(--fw-semi-bold);
+    @include adaptiveValue('font-size',36,26);
+    @include adaptiveValue('line-height',44,35);
+    margin-bottom: rem(12);
+  }
+  &__top-text {
+    display: inline-block;
+    font-weight: var(--fw-medium);
+    font-size: rem(14);
+    line-height: rem(20);
+    text-align: center;
+    color: var(--top-heading-co);
+    background: #f0f6ff;
+    padding: rem(2) rem(10);
+    border-radius: rem(150);
+    margin-bottom: rem(10);
+  }
+  &__sub-text {
+    font-size: rem(18);
+    @include adaptiveValue('line-height',28,24);
+    text-align: center;
+    margin-bottom: rem(12);
   }
 }

@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.config.js",
+    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.config.js && gulp",
     "dev": "cross-env NODE_ENV=dev webpack serve --config config/webpack.dev.config.js",
     "analyzer": "cross-env NODE_ENV=production webpack --config config/webpack.analyze.config.js"
+    
   },
   "repository": {
     "type": "git",

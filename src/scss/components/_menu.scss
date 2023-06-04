@@ -1,6 +1,8 @@
 @use '../abstract/vars' as *;
 @use '../abstract/mixins' as *;
-
+/*
+   ==== Menu ====
+*/
 .menu {
   @media (max-width: $burgerBreakpoint) {
     display: flex;
