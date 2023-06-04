@@ -55,7 +55,7 @@
   }
   &__sub-text {
     font-size: rem(18);
-    line-height: rem(28);
+    @include adaptiveValue('line-height',28,24);
     text-align: center;
     margin-bottom: rem(12);
   }
