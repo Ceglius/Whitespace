@@ -31,4 +31,4 @@ function buildStyles() {
 
 
 
-exports.default = gulp.series(scripts, buildStyles)
+exports.default = gulp.series( buildStyles)
